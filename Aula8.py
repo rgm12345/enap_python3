@@ -11,11 +11,6 @@ st.markdown("Vamos fazer uma tentativa...")
 #st.code("x=2021")
 #st.latex(r''' a+a r^1+a r^2+a r^3 ''')
 
-'''grau_satisfacao = st.select_slider(
-    'Qual o seu grau de satisfação?',
-    options=range(0, 101))
-
-st.write('O cliente respondeu:', grau_satisfacao)'''
 
 st.button('Clique')
 st.radio('Selecione seu gênero',['Masculino','Feminino'])
