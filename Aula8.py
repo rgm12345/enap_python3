@@ -1,4 +1,9 @@
+
+import pandas as pd
+
 import streamlit as st
+
+
 
 st.write("Este é meu primeiro Deploy")
 
@@ -37,3 +42,25 @@ st.success("Você conseguiu!")
 st.error("Erro!")
 st.warning("Advertência")
 st.info("Esta é uma informação")
+
+
+# Criando um dicionário
+dados = {
+    "nomeServidor": ["Adriana", "Monica", "Samara"],
+    "salario": [1200, 300, 5000]
+}
+
+# Convertendo para DataFrame
+df = pd.DataFrame(dados)
+
+st.write("Cirando uma tabela com Pandas")
+#tabelas interativas
+st.dataframe(df)
+
+
+
+servidor_selected = st.selectbox('Qual servidor você gostaria de selecionar',df['nomeServidor'])
+
+dadosFiltrados = df[df['nomeServidor'] == servidor_selected]
+
+dadosFiltrados
