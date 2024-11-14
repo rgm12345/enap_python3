@@ -23,21 +23,7 @@ if st.checkbox('Mostrar tabela'):
   
 st.map(dadosFiltrados, latitude="Lat_d", longitude="Long_d")
 
-qtdeMunicipios = len(df['NM_MUNIC'].unique())
-st.write("A quantidade de municípios com localização quilombola é " + str(qtdeMunicipios))
 
-qtdeComunidades = len(df['NM_AGLOM'].unique())
-st.write("A quantidade de comunidades quilombolas é " + str(qtdeComunidades))
-
-st.header('Número de comunidades por UF')
-st.bar_chart(df['NM_UF'].value_counts())
-
-st.header('Os dez municípios com mais comunidades quilombolas')
-st.bar_chart(df['NM_MUNIC'].value_counts()[:10])
-
-numero = st.slider('Selecione um número de linhas a serem exibidas', min_value = 0, max_value = 100)
-
-st.write(df.head(numero))
 
 #st.metric('# Municípios', len(df['NM_MUNIC'].unique()))
 #st.metric('# Comunidades', len(df['NM_AGLOM'].unique()))
