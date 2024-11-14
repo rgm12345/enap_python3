@@ -39,5 +39,5 @@ numero = st.slider('Selecione um número de linhas a serem exibidas', min
 
 st.write(df.head(numero))
 
-st.metric('# Municípios', len(df['NM_MUNIC'].unique()))
-st.metric('# Comunidades', len(df['NM_AGLOM'].unique()))
+#st.metric('# Municípios', len(df['NM_MUNIC'].unique()))
+#st.metric('# Comunidades', len(df['NM_AGLOM'].unique()))
