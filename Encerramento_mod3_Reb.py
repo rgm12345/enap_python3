@@ -44,6 +44,15 @@ st.bar_chart(df_filtrado,
              y_label='Quantidade de deputados')
 
 
-
 st.write('A distribuição de gênero para a Câmara dos Deputados é a seguinte:')
 
+fig = px.bar(df_dep,
+x='siglaUf', 
+y='id', 
+color='genero', 
+title='Distribuição de gênero na Câmara dos Deputados',
+labels={'Quantidade': 'Quantidade', 'UF': 'Unidade Federativa'},
+barmode='stack'  #Aqui é onde definimos o stacked bar
+)
+
+st.plotly_chart(fig)
